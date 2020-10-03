@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { mapStateToProps, mapDispatchProps } from '../containers/TaskInputContainer.js';
+import { mapStateToProps, mapDispatchProps } from '../containers/PamatoTaskInputContainer.js';
 import { connect } from 'react-redux';
 
-function TaskInput(props) {
+function PamatoTaskInput(props) {
     const handleSubmit = event => {
         event.preventDefault()
         props.addTask(props.newTask)
@@ -12,7 +12,7 @@ function TaskInput(props) {
         props.watchTaskInput(event.target.value)
     }
     return(
-        <div class="TaskInput">
+        <div className="PamatoTaskInput">
             <form onSubmit={handleSubmit}>
                 <input className="TaskInput" placeholder="What's your plan today?" type="text" value={props.newTask} onChange={handleChange} />
             </form>
@@ -20,4 +20,4 @@ function TaskInput(props) {
     )
 }
 
-export default connect(mapStateToProps,mapDispatchProps)(TaskInput)
+export default connect(mapStateToProps,mapDispatchProps)(PamatoTaskInput)

@@ -1,3 +1,3 @@
-import { tasks, newTask } from './taskReducer.js';
+import { tasks, newTask, filterTask } from './taskReducer.js';
 import { combineReducers } from 'redux';
-export default combineReducers({ tasks, newTask })
+export default combineReducers({ tasks, newTask, filterTask })

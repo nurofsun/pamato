@@ -4,9 +4,9 @@ import PamatoHeader from './components/PamatoHeader.jsx';
 import PamatoDate from './components/PamatoDate.jsx';
 import PamatoMain from './components/PamatoMain.jsx';
 import PamatoFooter from './components/PamatoFooter.jsx';
-import TaskList from './components/TaskList.jsx';
-import TaskInput from './components/TaskInput.jsx';
-import TaskTab from './components/TaskTab.jsx';
+import PamatoTaskList from './components/PamatoTaskList.jsx';
+import PamatoTaskInput from './components/PamatoTaskInput.jsx';
+import PamatoTaskTab from './components/PamatoTaskTab.jsx';
 
 function App() {
   return (
@@ -15,11 +15,11 @@ function App() {
             <PamatoDate/>
         </PamatoHeader>
         <PamatoMain>
-            <TaskTab></TaskTab>
-            <TaskList/>
+            <PamatoTaskTab/>
+            <PamatoTaskList/>
         </PamatoMain>
         <PamatoFooter>
-            <TaskInput/>
+            <PamatoTaskInput/>
         </PamatoFooter>
     </div>
   );

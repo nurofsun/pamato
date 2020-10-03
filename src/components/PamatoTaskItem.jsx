@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-function TaskItem(props) {
+function PamatoTaskItem(props) {
     return(
-        <li className="TaskItem" 
+        <li className="PamatoTaskItem" 
             onClick={props.onTaskItemClick}>
             <div>
                 <span className={ props.complete ? "indicator is-inactive" : "indicator is-active" }></span>
@@ -13,4 +13,4 @@ function TaskItem(props) {
     )
 }
 
-export default TaskItem;
+export default PamatoTaskItem;
