@@ -12,9 +12,11 @@ function TaskInput(props) {
         props.watchTaskInput(event.target.value)
     }
     return(
-        <form onSubmit={handleSubmit}>
-            <input type="text" value={props.newTask} onChange={handleChange} />
-        </form>
+        <div class="TaskInput">
+            <form onSubmit={handleSubmit}>
+                <input className="TaskInput" placeholder="What's your plan today?" type="text" value={props.newTask} onChange={handleChange} />
+            </form>
+        </div>
     )
 }
 

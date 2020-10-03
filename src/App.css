@@ -1,38 +1,152 @@
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+#root {
+  height: 100vh;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  max-width: 452px;
+  margin-right: auto;
+  margin-left: auto;
+  background: #8430b2;
+  background: -moz-linear-gradient(45deg,  #8430b2 0%, #75a8ea 100%);
+  background: -webkit-linear-gradient(45deg,  #8430b2 0%,#75a8ea 100%);
+  background: linear-gradient(45deg,  #8430b2 0%,#75a8ea 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8430b2', endColorstr='#75a8ea',GradientType=1 );
+  color: white;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 100vh;
+}
+.PamatoHeader {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.PamatoDate time {
+  color: #444;
+}
+.PamatoDate .today {
+  font-size: 20pt;
+  font-weight: bold;
+}
+.PamatoDate p {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.PamatoMain {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: #333;
+  flex-grow: 1;
+  padding-top: 10px;
+  overflow: hidden;
+  border-radius: 14px 14px 0px 0px;
+  box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.1);
+}
+.PamatoMain h4 {
+  font-size: 20pt;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.PamatoFooter {
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: white;
+}
+.TaskInput input {
+  font-size: 14pt;
+  width: 100%;
+  padding: 15px 20px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.1);
+}
+.TaskInput input:focus {
+  border-color: rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.1);
+}
+.TaskInput input::placeholder {
+  text-transform: capitalize;
+}
+.TaskList {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  list-style-type: none;
+  padding: 20px 10px 20px 10px;
+  margin: 0px;
+  background-color: white;
+  border-radius: 10px 10px 0px 0px;
+}
+.TaskList .Message {
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  color: #888888;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.TaskItem {
+  padding: 10px 15px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-transform: capitalize;
+  font-size: 12pt;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
+.TaskItem button {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #888;
+  font-size: 20pt;
+  cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.TaskItem .indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-right: 15px;
+}
+.TaskItem .indicator.is-active {
+  background-color: #3fff95;
+}
+.TaskItem .indicator.is-inactive {
+  background-color: #eaeaea;
+}
+.TaskTab {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 15px;
+}
+.TaskTabItem {
+  text-transform: uppercase;
+  font-size: 10pt;
+  font-weight: 600;
+  background-color: rgba(119, 151, 226, 0.1);
+  color: rgb(119, 151, 226);
+  margin-right: 5px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 5px 15px;
 }
