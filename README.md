@@ -1,5 +1,32 @@
 # Pamato
-plan management tool.
+
+a simple plan manager web app, and help you become more productive.
+
+<p align="center">
+        <img src="./public/logo512.png" alt="Pamato Logo" width="150" height="150">
+</p>
+<p align="center">
+        <a href="https://github.com/nurofsun/pamato/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/nurofsun/pamato?style=flat-square"></a>
+        <a href="https://github.com/nurofsun/pamato/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/nurofsun/pamato?style=flat-square"></a>
+        <a href="https://github.com/nurofsun/pamato/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/nurofsun/pamato?style=flat-square"></a>
+        <a href="https://github.com/nurofsun/pamato/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/nurofsun/pamato?style=social"></a>
+        <a href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fnurofsun%2Fpamato"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fnurofsun%2Fpamato"></a>
+</p>
+
+## Features
+- Modern design.
+- Create, Delete tasks.
+- Toggle tasks.
+- Task tab active, inactive, all.
+
+## Installing
+- Clone this repository.
+- `cd pamato`
+- Run `npm install` to install dependencies.
+- `npm start` if you want to start development mode.
+- `npm run build` build app to production mode.
+- `serve -s build` to start the application.
+
 ### `npm start`
 
 Runs the app in the development mode.<br />
