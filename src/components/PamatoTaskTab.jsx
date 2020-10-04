@@ -6,22 +6,34 @@ function PamatoTaskTab(props) {
     const handleClick = (type) => {
         props.setFilterTask(type)
     }
+
+    let tasksAllCount, tasksInActiveCount, tasksActiveCount;
+    tasksAllCount = props.tasks.length;
+
+    let tasksInActive = props.tasks.filter( task => task.complete === true )
+    tasksInActiveCount = tasksInActive.length;
+
+    let tasksActive = props.tasks.filter( task => task.complete === false );
+    tasksActiveCount = tasksActive.length;
     return(
         <nav className="PamatoTaskTab">
             <button 
                 className={ props.filterTask === 'SHOW_ALL_TASK' ? 'PamatoTaskTabItem active' : 'PamatoTaskTabItem' } 
                 onClick={() => handleClick('SHOW_ALL_TASK')}>
-                All
+                <span className="label">All</span>
+                <span className="count">{tasksAllCount}</span>
             </button>
             <button 
                 className={ props.filterTask === 'SHOW_INACTIVE_TASK' ? 'PamatoTaskTabItem active' : 'PamatoTaskTabItem' } 
                 onClick={() => handleClick('SHOW_INACTIVE_TASK')}>
-                InActive
+                <span className="label">InActive</span>
+                <span className="count">{tasksInActiveCount}</span>
             </button>
             <button 
                 className={ props.filterTask === 'SHOW_ACTIVE_TASK' ? 'PamatoTaskTabItem active' : 'PamatoTaskTabItem' } 
                 onClick={() => handleClick('SHOW_ACTIVE_TASK')}>
-                Active
+                <span className="label">Active</span>
+                <span className="count">{tasksActiveCount}</span>
             </button>
         </nav>
     )

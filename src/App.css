@@ -3,6 +3,8 @@
 }
 body {
   height: 100vh;
+  color: #434343;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 #root {
   height: 100vh;
@@ -26,18 +28,20 @@ body {
 .PamatoHeader {
   padding: 15px 20px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .PamatoDate time {
   color: #444;
 }
 .PamatoDate .today {
-  font-size: 20pt;
+  font-size: 16pt;
   font-weight: bold;
 }
 .PamatoDate p {
   margin-top: 0px;
   margin-bottom: 10px;
+  font-size: 10pt;
 }
 .PamatoMain {
   display: flex;
@@ -48,7 +52,6 @@ body {
   padding-top: 10px;
   overflow: hidden;
   border-radius: 14px 14px 0px 0px;
-  box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.1);
 }
 .PamatoMain h4 {
   font-size: 20pt;
@@ -63,30 +66,37 @@ body {
   background-color: white;
 }
 .PamatoTaskInput input {
-  font-size: 14pt;
+  font-size: 12pt;
   width: 100%;
-  padding: 15px 20px;
+  padding: 15px 12px;
   overflow: hidden;
   margin-bottom: 15px;
   border-radius: 6px;
   outline: none;
-  border: 1px solid rgba(0,0,0,0.1);
   background-color: #ffffff;
-  box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.1);
+  border: 1px solid rgba(119,151,226, 0.3);
+  box-shadow: 0px 0px 10px 1px rgba(119, 151, 226, 0.2);
 }
 .PamatoTaskInput input:focus {
-  border-color: rgba(0,0,0,0.2);
-  box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.1);
+  border: 1px solid rgba(119,151,226, 0.4);
 }
 .PamatoTaskInput input::placeholder {
   text-transform: capitalize;
+}
+.PamatoTaskTitle {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 10pt;
+  text-transform: uppercase;
 }
 .PamatoTaskList {
   width: 100%;
   height: 100%;
   overflow-y: auto;
   list-style-type: none;
-  padding: 20px 10px 20px 10px;
+  padding: 0px;
   margin: 0px;
   background-color: white;
   border-radius: 10px 10px 0px 0px;
@@ -107,10 +117,14 @@ body {
   justify-content: space-between;
   align-items: center;
   text-transform: capitalize;
-  font-size: 12pt;
+  font-size: 11pt;
   font-weight: 600;
-  color: #333;
+  color: #434343;
   cursor: pointer;
+}
+.PamatoTaskItem div {
+  flex-grow: 1;
+  text-align: left;
 }
 .PamatoTaskItem button {
   border: none;
@@ -118,6 +132,8 @@ body {
   background: transparent;
   color: #888;
   font-size: 20pt;
+  padding: 0px;
+  margin: 0px;
   cursor: pointer;
 }
 .PamatoTaskItem .indicator {
@@ -126,6 +142,7 @@ body {
   border-radius: 50px;
   display: inline-block;
   margin-right: 15px;
+  flex-shrink: 0;
 }
 .PamatoTaskItem .indicator.is-active {
   background-color: #3fff95;
@@ -144,13 +161,46 @@ body {
   font-weight: 600;
   background-color: rgba(119, 151, 226, 0.1);
   color: rgb(119, 151, 226);
+  display: inline-flex;
+  align-items: center;
   margin-right: 5px;
   border: none;
   outline: none;
-  border-radius: 6px;
-  padding: 5px 15px;
+  border-radius: 4px;
+  padding: 7px 14px;
 }
 .PamatoTaskTabItem.active {
   background-color: rgb(119, 151, 226);
   color: white;
+}
+.PamatoTaskTabItem .label {
+  margin-right: 5px;
+}
+.PamatoTaskTabItem .count {
+  background-color: white;
+  border-radius: 50px;
+  padding: 2px 5px;
+  font-size: 8pt;
+  color: rgb(119, 151, 226);
+  font-weight: bold;
+}
+.PamatoUser {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px;
+}
+.PamatoUser img {
+  width: 64px;
+  height: auto;
+  border-radius: 100px;
+  border: 5px solid #f2f2f2;
+}
+.PamatoUser p {
+  margin: 0px 10px 0px 0px;
+  text-align: right;
+  font-size: 10pt;
+}
+.PamatoUser .username {
+  font-weight: bold;
 }

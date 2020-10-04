@@ -2,7 +2,7 @@ import {
     ADD_TASK,
     REMOVE_TASK,
     WATCH_TASK_INPUT,
-    COMPLETE_TASK,
+    TOGGLE_TASK,
     FILTER_TASK
 } from './actionTypes.js'
 
@@ -20,9 +20,9 @@ export const removeTask = id => {
     }
 }
 
-export const completeTask = id => {
+export const toggleTask = id => {
     return {
-        type: COMPLETE_TASK,
+        type: TOGGLE_TASK,
         id
     }
 }

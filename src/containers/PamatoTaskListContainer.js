@@ -1,4 +1,4 @@
-import { completeTask, removeTask } from '../actions/actionCreators.js';
+import { toggleTask, removeTask } from '../actions/actionCreators.js';
 
 export const mapStateToProps = state => {
     return {
@@ -8,7 +8,7 @@ export const mapStateToProps = state => {
 
 export const mapDispatchToProps = dispatch => {
     return {
-        completeTask: id => dispatch(completeTask(id)),
+        toggleTask: id => dispatch(toggleTask(id)),
         removeTask: id => dispatch(removeTask(id))
     }
 }

@@ -5,7 +5,7 @@ import PamatoTaskItem from './PamatoTaskItem.jsx';
 
 function PamatoTaskList(props) {
     const handleClick = (id) => {
-       props.completeTask(id) 
+       props.toggleTask(id) 
     }
     const handleDeleteClick = id => {
         props.removeTask(id)

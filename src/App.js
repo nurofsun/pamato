@@ -4,6 +4,7 @@ import PamatoHeader from './components/PamatoHeader.jsx';
 import PamatoDate from './components/PamatoDate.jsx';
 import PamatoMain from './components/PamatoMain.jsx';
 import PamatoFooter from './components/PamatoFooter.jsx';
+import PamatoUser from './components/PamatoUser.jsx';
 import PamatoTaskList from './components/PamatoTaskList.jsx';
 import PamatoTaskInput from './components/PamatoTaskInput.jsx';
 import PamatoTaskTab from './components/PamatoTaskTab.jsx';
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
         <PamatoHeader>
             <PamatoDate/>
+            <PamatoUser/>
         </PamatoHeader>
         <PamatoMain>
             <PamatoTaskTab/>

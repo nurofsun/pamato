@@ -1,7 +1,7 @@
 import {
     ADD_TASK,
     REMOVE_TASK,
-    COMPLETE_TASK,
+    TOGGLE_TASK,
     WATCH_TASK_INPUT,
     FILTER_TASK,
 } from '../actions/actionTypes.js';
@@ -17,10 +17,10 @@ export function tasks(state=[],action) {
             ]
         case REMOVE_TASK:
             return state.filter( task => task.id !== action.id )
-        case COMPLETE_TASK: 
+        case TOGGLE_TASK: 
             return state.map( task => {
                 if (task.id === action.id) {
-                    task.complete = true
+                    task.complete = !task.complete
                 }
                 return task
             })

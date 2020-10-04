@@ -1,6 +1,6 @@
 export const ADD_TASK = 'ADD_TASK'
 export const REMOVE_TASK = 'REMOVE_TASK'
-export const COMPLETE_TASK = 'COMPLETE_TASK'
+export const TOGGLE_TASK = 'COMPLETE_TASK'
 export const WATCH_TASK_INPUT = 'WATCH_TASK_INPUT'
 export const FILTER_TASK = 'FILTER_TASK'
 export const SHOW_ALL_TASK = 'SHOW_ALL_TASK'
